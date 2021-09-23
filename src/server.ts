@@ -1,9 +1,9 @@
-import * as Util from '@dra2020/util';
-import * as Q from '@dra2020/memsqs';
+import { Util } from '@dra2020/baseclient';
+import { Memsqs } from '@dra2020/baseserver';
 
 const Port: number = Number(process.env.PORT) || 14141;
 const Interval: number = Number(process.env.SQS_REPORTING_INTERVAL) || (1000 * 60 * 60);
-let server = new Q.SQSServer(Port);
+let server = new Memsqs.SQSServer(Port);
 console.log('======================');
 console.log('======================');
 console.log(`SQS Server listening on port ${Port}`);
