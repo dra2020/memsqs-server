@@ -14,7 +14,16 @@ rm -rf ${DST}
 mkdir ${DST}
 mkdir ${DST}/node_modules
 
-cp ${SRCSERVER}/package.json ${DST}/package.json
+# Prune packaged node_modules (aws-sdk is packaged into bundle to minimize overall size)
+(cd ${SRCSERVER}; npm prune --production; rm -rf node_modules/aws-sdk)
+cp -R ${SRCSERVER}/node_modules/* ${DST}/node_modules/
+
+# Reset for development
+(cd ${SRCSERVER}; npm install)
+
+# Not including package.json will prevent npm install on deploy
+#cp ${SRCSERVER}/package.json ${DST}/package.json
+
 cp ${SRCSERVER}/server.js ${DST}
 cp -R ${SRCSERVER}/dist ${DST}
 
