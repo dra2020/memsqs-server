@@ -17,7 +17,7 @@ var serverConfig = {
     module: {
 		rules: [
 			{ test: /\.tsx?$/, use: 'ts-loader', exclude: /node_modules/ },
-			{ test: /\.json$/, exclude: /node_modules/, loader: 'json-loader' },
+			{ test: /\.json$/, loader: 'json-loader' },
 			{ test: /\.js$/, enforce: "pre", loader: "source-map-loader" }
 		]
     },

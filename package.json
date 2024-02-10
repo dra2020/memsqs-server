@@ -1,5 +1,5 @@
 {
-  "name": "@dra2020/simplesqs-server",
+  "name": "@dra2020/memsqs-server",
   "version": "1.0.0",
   "description": "Server for in-memory simple queuing service ala AWS SQS.",
   "main": "dist/server.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dra2020/simplesqs-server.git"
+    "url": "git+https://github.com/dra2020/memsqs-server.git"
   },
   "keywords": [
     "GeoJSON",
@@ -19,20 +19,20 @@
   "author": "Terry Crowley",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dra2020/simplesqs-server/issues"
+    "url": "https://github.com/dra2020/memsqs-server/issues"
   },
-  "homepage": "https://github.com/dra2020/simplesqs-server#readme",
+  "homepage": "https://github.com/dra2020/memsqs-server#readme",
   "devDependencies": {
-    "@types/node": "^18.19.15",
-    "source-map-loader": "^5.0.0",
-    "ts-loader": "^9.5.1",
+    "@types/node": "^12",
+    "source-map-loader": "^3.0.0",
+    "ts-loader": "^9.2.6",
     "tsify": "^5.0.4",
-    "typescript": "^5.3.3",
-    "webpack": "^5.90.1",
-    "webpack-cli": "^5.1.4"
+    "typescript": "^4.4.3",
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.8.0"
   },
   "dependencies": {
-    "@dra2020/baseclient": "^1.0.123",
-    "@dra2020/baseserver": "^1.0.49"
+    "@dra2020/baseclient": "^1.0.40",
+    "@dra2020/baseserver": "^1.0.28"
   }
 }
