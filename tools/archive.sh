@@ -1,6 +1,6 @@
 #!/bin/sh
 
-SRCSERVER=./memsqs-server
+SRCSERVER=./simplesqs-server
 DST=${SRCSERVER}.deploy
 
 if [ ! -e ${SRCSERVER} ]; then
@@ -28,9 +28,9 @@ cp ${SRCSERVER}/server.js ${DST}
 cp -R ${SRCSERVER}/dist ${DST}
 
 cd ${DST}
-zip -q -r archive-memsqs.zip .
-mv archive-memsqs.zip ..
+zip -q -r archive-simplesqs.zip .
+mv archive-simplesqs.zip ..
 cd ..
 rm -rf ${DST}
-echo INFO: Archive created in archive-memsqs.zip
+echo INFO: Archive created in archive-simplesqs.zip
 exit 0
